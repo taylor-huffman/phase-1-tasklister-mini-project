@@ -1,3 +1,7 @@
+* {
+  font-family: 'Jost', sans-serif;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -7,12 +11,51 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(rgb(232, 248, 255), rgb(212, 224, 247));
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  float: left;
+  margin-top: 3px;
 }
 
 button {
-  font-size: 7px;
+  font-size: 15px;
+  margin: 0px 0px 0px 8px;
 }
+
+.container {
+  margin-bottom: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 20px;
+  border: 0;
+}
+
+select#sort {
+  width: unset;
+  float: right;
+  font-size: 12px;
+  background-color: #efefef;
+}
+
+input#submit {
+  margin-top: 10px;
+  background-color: #5353ff;
+  color: white;
+}
+
+
+input#new_task {
+  max-width: calc(100% - 40px);
+}
+
 
 #main-content {
   position: relative;
@@ -20,18 +63,67 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
+  /* border: 1px solid #333; */
+  /* background: rgba(255, 255, 255, 0.3); */
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  /* box-shadow: 2px 5px 5px #333; */
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+ul {
+  padding-left: 0;
+  clear: both;
+  margin-top: 75px;
 }
 
 #list {
-  margin: 10px;
-  border: 1px solid #333;
+  margin: 40px 0px 10px;
   background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
+  padding: 15px 8px 18px 18px;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  box-shadow: 0px 11px 10px -8px rgb(51 51 51 / 10%);
+  width: 92%;
+}
+
+#alert {
+  color: red;
+  min-height: 24px;
+}
+
+#tasks p {
+  position: relative;
+  display: flex;
+  margin-left: 4px;
+}
+
+.edit-button {
+  margin-left: auto;
+}
+
+.edit-button, .delete-button {
+  height: fit-content;
+}
+
+#tasks p:before {
+  content: '';
+  height: 7px;
+  width: 7px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: -12px;
+}
+
+.high:before {
+  background-color: red;
+}
+
+.medium:before {
+  background-color: rgb(218, 218, 0);
+}
+
+.low:before {
+  background-color: rgb(0, 196, 0);
 }
