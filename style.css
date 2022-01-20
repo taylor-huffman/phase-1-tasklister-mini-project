@@ -56,6 +56,11 @@ input#new_task {
   max-width: calc(100% - 40px);
 }
 
+input.edit-input {
+  margin-left: -14px;
+  background-color: rgb(239 239 239);
+}
+
 
 #main-content {
   position: relative;

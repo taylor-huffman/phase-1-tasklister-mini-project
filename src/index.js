@@ -28,7 +28,7 @@ function buildTaskItem(task, priority) {
   p.textContent = task
   p.appendChild(editBtn)
   p.appendChild(deletetBtn)
-  p.classList.add(priority)
+  p.classList.add('list-item', priority)
   document.querySelector('#tasks').appendChild(p)
   if (priority === 'high') {
     let priorityNumber = 1
@@ -48,10 +48,33 @@ function deleteItem(e) {
 }
 
 function editItem(e) {
-  alert('Ready to edit?!')
+  alert('Edit feature coming soon!')
+  // let taskItem = e.target.parentNode 
+  // debugger
+  // let inputField = document.createElement('input')
+  // inputField.type = 'text'
+  // inputField.value = taskItem.textContent
+  // debugger
+  // // let editBtn = document.getElementsByClassName('edit-button')
+  // // e.editBtn.innerHTML = 'Save'
+  // taskItem.classList.remove('high', 'medium', 'low')
+  // debugger
+  // taskItem.setAttribute('value', '')
+  // debugger
+  // // inputField.textContent = taskItem.textContent
+  // // debugger
+  // taskItem.textContent = ''
+  // debugger
+  // taskItem.appendChild(inputField)
+  // debugger
+  // inputField.classList.add('edit-input')
+  // debugger
 }
 
 function buildEnterTaskAlert() {
   let alert = document.getElementById('alert')
   alert.textContent = '* Please enter a task first!'
 }
+
+const sortDropDown = document.getElementById('sort')
+sortDropDown.addEventListener('click', () => alert('Sorting feature coming soon!'))
